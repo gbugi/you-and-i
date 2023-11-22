@@ -30,19 +30,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr> <!--th:each="board : ${boardList}"-->
+                            <tr th:each="board : ${boardList}">
 <!--                                <td class="table-img"><img th:src="{board.imgUrl}" alt="프로필이미지" th:if="${board.imgUrl != null}">-->
                                 <td class="table-img"><img src="/img/ggobuk.jpeg" alt="프로필이미지">
                                 </td>
                                 <td>
                                     <p class="m-0 font-12">
-                                        <span class="col-green font-weight-bold" th:text="'게시판 만들기'"></span>
+                                        <span class="col-green font-weight-bold" th:text="${board.content}"></span>
                                     </p>
                                 </td>
-                                <td>2023-11-21</td>
+                                <td th:text="${board.startDt}"></td>
                                 <td>2023-11-23</td>
                                 <td>
-                                    <span class="badge priority-high rounded-pill">Priority: High</span>
+                                    <span class="badge priority-high rounded-pill">Priority: [[${board.priority}]]</span>
                                 </td>
                                 <td class="align-middle">
                                     <div class="progress-text">50%</div>

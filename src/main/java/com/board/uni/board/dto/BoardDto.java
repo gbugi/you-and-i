@@ -1,5 +1,6 @@
 package com.board.uni.board.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -25,13 +26,9 @@ public class BoardDto {
 
     private String subContent;
     
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private LocalDateTime startDt;
+    private LocalDate startDt;
     
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private LocalDateTime deadline;
+    private LocalDate deadline;
     
     private StatusEnum status;
 
