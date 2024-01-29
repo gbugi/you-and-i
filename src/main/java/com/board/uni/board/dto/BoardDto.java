@@ -20,7 +20,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class BoardDto {
-	private UUID id;
+	private Long id;
 
     private String content;
 
